@@ -1,6 +1,21 @@
 group = 'de.mfo.surfer'
 version = '2.0.0-SNAPSHOT'
 
-task wrapper(type: Wrapper) {
-	gradleVersion = '2.3'
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
 }
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.10'
+    runtime 'ch.qos.logback:logback-classic:1.0.13'
+    testCompile 'junit:junit:4.12'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+mainClassName = "de.mfo.surfer.Surfer"
