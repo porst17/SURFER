@@ -3,8 +3,8 @@ package de.mfo.surfer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,15 +20,12 @@ public class Surfer extends Application
 
         @Override
         public void start( Stage stage )
+                throws Exception
 	{
-                Button btn = new Button( "Click ");
-                btn.setOnAction(e -> logger.info( "Hello JavaFX 8 SURFER" ) );
-                StackPane root = new StackPane();
-                root.getChildren().add( btn );
-                stage.setScene( new Scene( root ) );
-                stage.setWidth( 300 );
-                stage.setHeight( 300 );
-                stage.setTitle("JavaFX 8 app");
+                logger.info( "loading user interface" );
+                Scene scene = new Scene( FXMLLoader.load( getClass().getResource( "Surfer.fxml" ) ) );
+                stage.setScene( scene );
+                stage.setTitle( "SURFER" );
                 stage.show();
         }
 }

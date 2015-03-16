@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <GridPane hgap="15.0" style="-fx-background-color: #EEEEEE;" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <HBox prefHeight="100.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="0.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="&lt;" />
+                              <Button mnemonicParsing="false" text="&gt;" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" text="&lt;&lt;" />
+                     </children>
+                  </HBox>
+                  <Region HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets right="8.0" />
+                     </padding>
+                  </Region>
+                  <HBox prefHeight="100.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="L" />
+                        <Button mnemonicParsing="false" text="S" />
+                        <Button mnemonicParsing="false" text="E" />
+                        <Button mnemonicParsing="false" text="P" />
+                        <Button mnemonicParsing="false" text=" © " />
+                        <Button mnemonicParsing="false" text="DE" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <HBox fx:id="variablesHBox" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" style="-fx-font-weight: bold; -fx-text-fill: red;" text="x" />
+                        <Button mnemonicParsing="false" style="-fx-font-weight: bold; -fx-text-fill: green;" text="y" />
+                        <Button mnemonicParsing="false" style="-fx-font-weight: bold; -fx-text-fill: blue;" text="z" />
+                     </children>
+                  </HBox>
+                  <Region prefHeight="200.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="8.0" />
+                     </padding>
+                  </Region>
+                  <HBox fx:id="arithOpsHBox" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="+" />
+                        <Button mnemonicParsing="false" text="-" />
+                        <Button mnemonicParsing="false" text="×" />
+                        <Button mnemonicParsing="false" text=" ²" />
+                        <Button mnemonicParsing="false" text=" ³" />
+                        <Button mnemonicParsing="false" text=" ⁿ" />
+                     </children>
+                  </HBox>
+                  <Region prefHeight="200.0" prefWidth="200.0">
+                     <padding>
+                        <Insets right="8.0" />
+                     </padding>
+                  </Region>
+                  <HBox fx:id="paramsHBox" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="a" />
+                        <Button mnemonicParsing="false" text="b" />
+                        <Button mnemonicParsing="false" text="c" />
+                        <Button mnemonicParsing="false" text="d" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="1" />
+                        <Button mnemonicParsing="false" text="2" />
+                        <Button mnemonicParsing="false" text="3" />
+                        <Button mnemonicParsing="false" text="4" />
+                        <Button mnemonicParsing="false" text="5" />
+                        <Button mnemonicParsing="false" text="6" />
+                        <Button mnemonicParsing="false" text="7" />
+                        <Button mnemonicParsing="false" text="8" />
+                        <Button mnemonicParsing="false" text="9" />
+                        <Button mnemonicParsing="false" text="0" />
+                     </children>
+                  </HBox>
+                  <Region prefHeight="200.0" prefWidth="200.0">
+                     <padding>
+                        <Insets right="8.0" />
+                     </padding>
+                  </Region>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="," />
+                     </children>
+                  </HBox>
+                  <Region prefHeight="200.0" prefWidth="200.0">
+                     <padding>
+                        <Insets right="8.0" />
+                     </padding>
+                  </Region>
+                  <HBox prefHeight="100.0" prefWidth="0.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="(" />
+                        <Button mnemonicParsing="false" text=")" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <children>
+                  <TextField prefHeight="1000.0" prefWidth="1000.0" />
+                  <Button mnemonicParsing="false" prefHeight="1000.0" text="✓" />
+               </children>
+            </HBox>
+            <AnchorPane fx:id="groupLabels" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" text="Variablen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+                  <Label alignment="BOTTOM_LEFT" text="Arithmetische Operationen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" />
+                  <Label alignment="BOTTOM_LEFT" text="Parameter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </bottom>
+   <left>
+      <VBox prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="SURFER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TabPane prefHeight="10000.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Start">
+                     <content>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="10000.0" prefWidth="10000.0" text="Tutorial" />
+                              <Button mnemonicParsing="false" prefHeight="10000.0" prefWidth="10000.0" text="Fantasy" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" prefHeight="10000.0" prefWidth="10000.0" text="Weltrekord" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                <Tab text="Info">
+                     <content>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </content>
+                  </Tab>
+                  <Tab text="Farben">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ColorPicker editable="true" />
+                              <ColorPicker editable="true" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab text="Pagination Test">
+                     <content>
+                        <Pagination maxPageIndicatorCount="9" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Region style="-fx-background-color: #FFEEEE;" HBox.hgrow="ALWAYS" />
+                  <GridPane hgap="5.0" prefWidth="300.0" vgap="5.0" HBox.hgrow="NEVER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="0.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="10000.0" vgrow="SOMETIMES" />
+                      <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Slider orientation="VERTICAL" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Slider orientation="VERTICAL" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Slider orientation="VERTICAL" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Slider orientation="VERTICAL" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Slider orientation="VERTICAL" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Label text="a" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Label text="b" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Label text="c" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Label text="d" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Label text="Zoom" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Label text="0.01" GridPane.rowIndex="3" />
+                        <VBox alignment="CENTER" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75" style="-fx-scale-x: 0.75; -fx-scale-y: 0.75;" text="▲" />
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75">
+                                 <graphic>
+                                    <Label style="-fx-scale-y: -1;" text="▲" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75" style="-fx-scale-x: 0.75; -fx-scale-y: 0.75;" text="▲" />
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75">
+                                 <graphic>
+                                    <Label style="-fx-scale-y: -1;" text="▲" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75" style="-fx-scale-x: 0.75; -fx-scale-y: 0.75;" text="▲" />
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75">
+                                 <graphic>
+                                    <Label style="-fx-scale-y: -1;" text="▲" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75" style="-fx-scale-x: 0.75; -fx-scale-y: 0.75;" text="▲" />
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75">
+                                 <graphic>
+                                    <Label style="-fx-scale-y: -1;" text="▲" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75" style="-fx-scale-x: 0.75; -fx-scale-y: 0.75;" text="▲" />
+                              <Button mnemonicParsing="false" scaleX="0.75" scaleY="0.75">
+                                 <graphic>
+                                    <Label style="-fx-scale-y: -1;" text="▲" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <Label text="0.01" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="0.01" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label text="0.01" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label text="0.01 x" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" disable="true" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <TilePane hgap="5.0" vgap="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </TilePane>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
