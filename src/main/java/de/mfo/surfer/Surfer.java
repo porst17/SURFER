@@ -6,6 +6,8 @@ import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
+import jfxtras.labs.scene.layout.ScalableContentPane;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,9 +25,16 @@ public class Surfer extends Application
                 throws Exception
 	{
                 logger.info( "loading user interface" );
-                Scene scene = new Scene( FXMLLoader.load( getClass().getResource( "Surfer.fxml" ) ) );
-                stage.setScene( scene );
+
+                ScalableContentPane scp = new ScalableContentPane();
+                scp.getContentPane().getChildren().add( FXMLLoader.load( getClass().getResource( "Surfer.fxml" ) ) );
+
+                Scene scene = new Scene( scp );
+
                 stage.setTitle( "SURFER" );
+                stage.setScene( scene );
+                stage.setWidth( 1280 );
+                stage.setHeight( 720 );
                 stage.show();
         }
 }
