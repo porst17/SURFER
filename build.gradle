@@ -1,11 +1,22 @@
 group = 'de.mfo.surfer'
 version = '2.0.0-SNAPSHOT'
 
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.javafxports:jfxmobile-plugin:1.0.0-b5'
+    }
+}
+
 apply plugin: 'java'
-apply plugin: 'application'
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -18,4 +29,23 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
 
-mainClassName = "de.mfo.surfer.Surfer"
+
+apply from: 'gradle/plugins/javafx.plugin'
+
+javafx {
+    mainClass = "de.mfo.surfer.Surfer"
+}
+
+
+/*
+// switch to build for mobile platform if needed
+// jfxmobile is currently incompatible with javafx.gradle
+apply plugin: 'org.javafxports.jfxmobile'
+
+jfxmobile {
+    mainClassName = 'de.mfo.surfer.Surfer'
+    ios {
+        forceLinkClasses = [ 'de.mfo.surfer.**' ]
+    }
+}
+*/
