@@ -9,7 +9,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
       <GridPane hgap="15.0" style="-fx-background-color: #EEEEEE;" vgap="5.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -181,9 +181,9 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TabPane prefHeight="10000.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+            <TabPane id="mainTabPane" prefHeight="10000.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
               <tabs>
-                <Tab text="Start">
+                <Tab>
                      <content>
                         <GridPane>
                           <columnConstraints>
@@ -201,13 +201,27 @@
                            </children>
                         </GridPane>
                      </content>
+                     <graphic>
+                        <Label contentDisplay="TOP" text="Start">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="PLAY_CIRCLE" />
+                           </graphic>
+                        </Label>
+                     </graphic>
                   </Tab>
-                <Tab text="Info">
+                <Tab>
                      <content>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                      </content>
+                     <graphic>
+                        <Label contentDisplay="TOP" text="Info">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="INFO_CIRCLE" />
+                           </graphic>
+                        </Label>
+                     </graphic>
                   </Tab>
-                  <Tab text="Farben">
+                  <Tab>
                      <content>
                         <VBox id="colorPickers" prefHeight="200.0" prefWidth="100.0">
                            <children>
@@ -216,11 +230,25 @@
                            </children>
                         </VBox>
                      </content>
+                     <graphic>
+                        <Label contentDisplay="TOP" text="Farben">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="PAINT_BRUSH" />
+                           </graphic>
+                        </Label>
+                     </graphic>
                   </Tab>
-                  <Tab text="Pagination Test">
+                  <Tab>
                      <content>
                         <Pagination maxPageIndicatorCount="9" prefHeight="200.0" prefWidth="200.0" />
                      </content>
+                     <graphic>
+                        <Label contentDisplay="TOP" text="Pages">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="FILE_TEXT" />
+                           </graphic>
+                        </Label>
+                     </graphic>
                   </Tab>
               </tabs>
             </TabPane>
