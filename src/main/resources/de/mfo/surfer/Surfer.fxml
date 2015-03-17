@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.canvas.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -27,11 +28,17 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="0.0">
                            <children>
-                              <Button mnemonicParsing="false" text="&lt;" />
-                              <Button mnemonicParsing="false" text="&gt;" />
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <Label style="-fx-scale-x: -1;" text="►" />
+                                 </graphic></Button>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <Label text="►" />
+                                 </graphic></Button>
                            </children>
                         </HBox>
-                        <Button mnemonicParsing="false" text="&lt;&lt;" />
+                        <Button mnemonicParsing="false" text="⌫" />
                      </children>
                   </HBox>
                   <Region HBox.hgrow="ALWAYS">
@@ -41,12 +48,27 @@
                   </Region>
                   <HBox prefHeight="100.0" spacing="5.0">
                      <children>
-                        <Button mnemonicParsing="false" text="L" />
-                        <Button mnemonicParsing="false" text="S" />
-                        <Button mnemonicParsing="false" text="E" />
-                        <Button mnemonicParsing="false" text="P" />
-                        <Button mnemonicParsing="false" text=" © " />
-                        <Button mnemonicParsing="false" text="DE" />
+                        <Button mnemonicParsing="false" style="-fx-font-family: Font Awesome;">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="FOLDER_OPEN_ALT" />
+                           </graphic></Button>
+                        <Button mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="FLOPPY_ALT" />
+                           </graphic></Button>
+                        <Button mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="DOWNLOAD" />
+                           </graphic></Button>
+                        <Button mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="PRINT" />
+                           </graphic></Button>
+                        <Button mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="COPYRIGHT" />
+                           </graphic></Button>
+                        <ChoiceBox prefWidth="50.0" />
                      </children>
                   </HBox>
                </children>
@@ -187,7 +209,7 @@
                   </Tab>
                   <Tab text="Farben">
                      <content>
-                        <VBox fx:id="colorPickers" prefHeight="200.0" prefWidth="100.0">
+                        <VBox id="colorPickers" prefHeight="200.0" prefWidth="100.0">
                            <children>
                               <ColorPicker editable="true" />
                               <ColorPicker editable="true" />
