@@ -8,7 +8,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
       <GridPane hgap="15.0" style="-fx-background-color: #EEEEEE;" vgap="5.0" BorderPane.alignment="CENTER">
@@ -188,7 +187,7 @@
                   </Tab>
                   <Tab text="Farben">
                      <content>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="colorPickers" prefHeight="200.0" prefWidth="100.0">
                            <children>
                               <ColorPicker editable="true" />
                               <ColorPicker editable="true" />
